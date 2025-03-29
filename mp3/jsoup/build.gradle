@@ -1,0 +1,29 @@
+
+
+apply plugin: 'java'
+
+tasks.withType(JavaCompile)
+{
+    options.encoding = 'UTF-8'
+}
+
+
+description = 'jy98'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	testImplementation 'junit:junit:4.12' 
+	testImplementation 'com.google.code.gson:gson:2.7'
+	testImplementation 'org.eclipse.jetty:jetty-server:9.2.28.v20190418'
+	testImplementation 'org.eclipse.jetty:jetty-servlet:9.2.28.v20190418'
+}	
+
+// jar {
+// 	archiveBaseName='scm-example'
+// 	archiveVersion='1.0.0-SNAPSHOT'
+// }
+
+project.buildDir = 'gradle-target'
